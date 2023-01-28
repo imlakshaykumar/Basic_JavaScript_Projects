@@ -1,8 +1,8 @@
 const imageArr = [
-    './Test Images/face-1.jpeg',
-    './Test Images/face-2.jpeg',
-    './Test Images/face-3.jpeg',
-    './Test Images/face-4.jpeg'
+    './Test Images/face-1.jpg',
+    './Test Images/face-2.jpg',
+    './Test Images/face-3.jpg',
+    './Test Images/face-4.jpg'
 ]
 
 const nameArr = ['Susan Smith', 'Anna Johanson', 'Peter Jones', 'Bill Anderson'];
