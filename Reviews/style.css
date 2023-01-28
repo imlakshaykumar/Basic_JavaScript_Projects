@@ -35,15 +35,19 @@ h2>span {
     padding: 30px;
 }
 
-.content::before {
+#image-div {
+    position: relative;
+}
+
+#image-div::before {
     content: "";
     width: 155px;
     height: 155px;
     background: rgb(136, 170, 243);
     position: absolute;
     border-radius: 50%;
-    right: 680px;
-    top: 210px;
+    right: 218px;
+    top: -5px;
 }
 
 #image-el {
