@@ -57,7 +57,7 @@ leftBtn.addEventListener('click', () => {
     }
     --arrIndex;
     change();
-    console.log(arrIndex);
+    // console.log(arrIndex);
 })
 
 rightBtn.addEventListener('click', () => {
@@ -69,7 +69,7 @@ rightBtn.addEventListener('click', () => {
         change();
     }
 
-    console.log(arrIndex);
+    // console.log(arrIndex);
 })
 
 surpriseBtn.addEventListener('click', () => {
