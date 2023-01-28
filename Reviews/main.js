@@ -38,11 +38,12 @@ const rightBtn = document.querySelector("#right-iconBtn")
 
 const surpriseBtn = document.querySelector("#surprise-Btn");
 
-let arrIndex;
+let arrIndex = 0;
 let image;
 let fullName;
 let position;
 let description;
+
 function change() {
     imageEL.src = imageArr[arrIndex];
     nameEL.textContent = nameArr[arrIndex];
@@ -51,11 +52,24 @@ function change() {
 }
 
 leftBtn.addEventListener('click', () => {
-
+    if (arrIndex === 0) {
+        arrIndex = nameArr.length;
+    }
+    --arrIndex;
+    change();
+    console.log(arrIndex);
 })
 
 rightBtn.addEventListener('click', () => {
+    if (arrIndex === nameArr.length - 1) {
+        arrIndex = 0;
+        change();
+    } else {
+        ++arrIndex;
+        change();
+    }
 
+    console.log(arrIndex);
 })
 
 surpriseBtn.addEventListener('click', () => {
