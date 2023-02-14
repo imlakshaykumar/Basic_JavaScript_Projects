@@ -49,7 +49,7 @@ a:hover {
     color: #49a6e9;
 }
 
-#index-list {
+.index-list {
     padding: 0;
     margin: 0;
     letter-spacing: .25em;
@@ -58,6 +58,7 @@ a:hover {
 .list {
     font-size: 1.2em;
     margin: 0 5px;
+    display: inline-block;
 }
 
 .icon {
@@ -70,4 +71,41 @@ a:hover {
 .icon:hover {
     color: #86bee6;
     transition: all .1s linear;
+}
+
+/* button (nav toggle) */
+#nav-toggle {
+    font-size: 1.3rem;
+    color: #49a6e9;
+    background: transparent;
+    border-color: transparent;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+
+/* 
+#nav-toggle:hover {
+    transform: rotate(90deg);
+} */
+
+#nav-toggle {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+
+    #nav-toggle {
+        display: block;
+    }
+
+    .index-list,
+    .icons {
+        display: none;
+    }
+
+    .nav-header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
 }
