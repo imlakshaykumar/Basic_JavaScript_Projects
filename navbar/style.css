@@ -98,8 +98,12 @@ a:hover {
         display: block;
     }
 
-    .index-list,
     .icons {
+        display: none;
+    }
+
+    .index-list {
+        height: auto;
         display: none;
     }
 
