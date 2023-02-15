@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@300&display=swap');
 
+:root {
+    --transition: all 0.3s ease;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -53,6 +57,7 @@ a:hover {
     padding: 0;
     margin: 0;
     letter-spacing: .25em;
+    transition: var(--transition) !important;
 }
 
 .list {
@@ -83,13 +88,12 @@ a:hover {
     cursor: pointer;
 }
 
-/* 
-#nav-toggle:hover {
-    transform: rotate(90deg);
-} */
-
 #nav-toggle {
     display: none;
+}
+
+.show-links {
+    transition: var(--transition);
 }
 
 @media screen and (max-width: 800px) {
@@ -98,12 +102,18 @@ a:hover {
         display: block;
     }
 
-    .icons {
-        display: none;
+    #nav-toggle:hover {
+        transform: rotate(90deg);
     }
 
-    .index-list {
-        height: auto;
+    /* head was row, made it column and aligned the items to start */
+    .head {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .index-list,
+    .icons {
         display: none;
     }
 
@@ -111,5 +121,29 @@ a:hover {
         width: 100%;
         display: flex;
         justify-content: space-between;
+    }
+
+    /* margin for spacing */
+    .index-list {
+        margin-top: 20px;
+    }
+
+    /* removed the left margin of 1st child in index-list li  */
+    /* .index-list li:first-child {
+        margin-left: 0;
+    } */
+    .index-list li {
+        margin-left: 0;
+        margin-bottom: 5px;
+    }
+
+    .index-list li:last-child {
+        margin-bottom: 0;
+    }
+
+    .show-links {
+        /* display: block !important; */
+        display: inline-grid;
+        overflow: hidden;
     }
 }
