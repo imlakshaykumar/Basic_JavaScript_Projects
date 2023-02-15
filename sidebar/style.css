@@ -1,0 +1,120 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: rgb(247, 240, 240);
+}
+
+.nav-btn {
+    border: transparent;
+    background: transparent;
+    color: #49a6e9;
+    font-size: 3rem;
+    float: right;
+    margin: 20px 30px;
+    cursor: pointer;
+}
+
+aside {
+    max-width: 21rem;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+}
+
+.heading {
+    font-size: 2rem;
+    text-shadow: 0 5px 2px rgb(191, 190, 190);
+}
+
+.heading span {
+    color: #49a6e9;
+}
+
+.close-btn {
+    font-size: 1.8rem;
+    border: transparent;
+    background: transparent;
+    color: red;
+    cursor: pointer;
+    margin-right: 1.1rem;
+    transition: all 0.3s ease-in-out;
+    animation: rotateDefault .3s linear;
+}
+
+.close-btn:hover {
+    animation: rotate .3s linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateDefault {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 15rem;
+    margin-top: 30px;
+}
+
+.list a {
+    display: block;
+    text-decoration: none;
+    color: #222;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    padding: 20px;
+}
+
+.list a:hover {
+    background-color: #81c1ee;
+    transition: all 0.3s linear;
+}
+
+.icons {
+    padding: 20px;
+    font-size: 1.8rem;
+}
+
+.icon {
+    color: #49a6e9;
+    margin-right: 20px;
+}
+
+.icon:hover {
+    color: #2a75aa;
+    transform: scale(1.1);
+}
+
+.sidebar {
+    display: none;
+    position: absolute;
+}
+
+.show-sidebar {
+    display: block;
+}
