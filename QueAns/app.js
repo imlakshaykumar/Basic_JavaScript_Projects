@@ -7,45 +7,18 @@ openBtn.forEach(function (btn) {
 
         const queContainer = e.currentTarget.parentElement.parentElement;
 
-        openBtn.forEach(function (button) {
-            button.classList.remove("show-close")
-        });
-
         queAll.forEach(function (element) {
-            element.classList.remove("show-ans")
-
-            // closeBtn.forEach(function (close) {
-            //     close.addEventListener("click", () => {
-            //         console.log("hello");
-            //     })
-            // })
+            if (queContainer !== element) {
+                element.classList.remove("show-ans")
+            }
         });
-        queContainer.classList.toggle("show-ans")
-        btn.classList.toggle("show-close")
+
+        if (queContainer.classList.contains("show-ans")) {
+            // console.log("add");
+            queContainer.classList.remove("show-ans")
+        } else {
+            // console.log("remove");
+            queContainer.classList.add("show-ans")
+        }
     })
 })
-
-closeBtn.forEach(function (close) {
-    close.addEventListener("click", (e) => {
-        const queContainer = e.currentTarget.parentElement.parentElement.parentElement;
-        // if (queContainer.classList.contains("show-ans")) {
-        //     queContainer.classList.remove("show-ans");
-        // }
-
-        const btnContainer = queContainer.querySelector(".btn");
-
-        // console.log(btnContainer);
-        // console.log(btnContainer.classList.contains("show-close"));
-
-        if (btnContainer.classList.contains("show-close") && queContainer.classList.contains("show-ans")) {
-            queContainer.classList.remove("show-ans");
-            btnContainer.classList.remove("show-close")
-        }
-
-        // console.log(queContainer.classList.contains("show-ans"));
-        // console.log(queContainer);
-        // console.log("Remove");
-        // queContainer.classList.remove("show-ans")
-        // btnContainer.classList.remove("show-close")
-    });
-});
