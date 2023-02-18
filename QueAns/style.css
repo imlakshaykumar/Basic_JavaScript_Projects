@@ -56,10 +56,10 @@ main {
     display: none;
 }
 
-.show-close .open-btn {
-    display: none;
+.show-ans .close-btn {
+    display: block;
 }
 
-.show-close .close-btn {
-    display: block;
+.show-ans .open-btn {
+    display: none;
 }
