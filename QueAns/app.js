@@ -25,20 +25,27 @@ openBtn.forEach(function (btn) {
     })
 })
 
-// closeBtn.forEach(function (close) {
-//     close.addEventListener("click", (e) => {
-//         const queContainer = e.currentTarget.parentElement.parentElement.parentElement;
-//         // if (queContainer.classList.contains("show-ans")) {
-//         //     queContainer.classList.remove("show-ans");
-//         // }
-//         // const btnContainer = queContainer.querySelector(".btn");
-//         // // if (btnContainer.classList.contains("show-close")) {
-//         // //     btnContainer.classList.remove("show-close");
-//         // // }
+closeBtn.forEach(function (close) {
+    close.addEventListener("click", (e) => {
+        const queContainer = e.currentTarget.parentElement.parentElement.parentElement;
+        // if (queContainer.classList.contains("show-ans")) {
+        //     queContainer.classList.remove("show-ans");
+        // }
 
-//         console.log(queContainer.classList.contains("show-ans"));
-//         console.log("Remove");
-//         // queContainer.classList.remove("show-ans")
-//         // btnContainer.classList.remove("show-close")
-//     });
-// });
+        const btnContainer = queContainer.querySelector(".btn");
+
+        // console.log(btnContainer);
+        // console.log(btnContainer.classList.contains("show-close"));
+
+        if (btnContainer.classList.contains("show-close") && queContainer.classList.contains("show-ans")) {
+            queContainer.classList.remove("show-ans");
+            btnContainer.classList.remove("show-close")
+        }
+
+        // console.log(queContainer.classList.contains("show-ans"));
+        // console.log(queContainer);
+        // console.log("Remove");
+        // queContainer.classList.remove("show-ans")
+        // btnContainer.classList.remove("show-close")
+    });
+});
